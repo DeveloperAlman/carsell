@@ -1,0 +1,103 @@
+.swish {
+    padding: 16rem 0;
+    width: 100vw;
+    height: 100vh;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // flex-direction: column-reverse;
+
+        &-text {
+            text-align: start;
+            margin-left: 5rem;
+            margin-bottom: 3rem;
+
+            &-heading {
+                font-size: 4.5rem;
+
+            }
+
+            &-text {
+                margin-top: 2rem;
+                font-size: 2rem;
+                line-height: 4rem;
+                color: $color-secondary;
+                transition: all 0.5s ease;
+                color: rgb(28, 28, 28);
+            }
+        }
+
+        &-wrapper {
+            & img {
+                width: 55rem;
+                height: 45rem;
+            }
+        }
+    }
+}
+
+.money__wrapper {
+    position: relative;
+}
+
+.money_kr {
+    display: block;
+    width: 25rem;
+    filter: blur(0.3rem);
+    z-index: -100;
+    opacity: 0.5;
+}
+
+.kr-1 {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+}
+
+.kr-2 {
+    position: absolute;
+    top: 3%;
+    left: -10%;
+}
+
+.kr-3 {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+}
+
+.kr-4 {
+    position: absolute;
+    top: 35%;
+    left: 0;
+}
+
+.kr-5 {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+}
+
+.kr-6 {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+}
+
+.kr-7 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.kr-8 {
+    position: absolute;
+    top: 76%;
+    left: -5%;
+}
+
+.swish-margin {
+    margin-top: 4rem;
+}

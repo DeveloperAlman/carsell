@@ -1,0 +1,222 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    z-index: 60 !important;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(0deg, #ff8119 0%, #ff8119 50%, #ffbb28 100%);
+
+    &__logo-img {
+        width: 30rem;
+        height: 15rem;
+        transition: height 0.75s ease;
+    }
+
+    &__nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 60 !important;
+    }
+
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__nav-item {
+        margin: 0 2.5rem;
+    }
+
+    &__nav-link {
+        font-size: 1.8rem !important;
+        color: $color-secondary;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 0 4.5rem;
+        width: 100%;
+        justify-content: space-between;
+
+        &-all {
+            position: absolute;
+            top: 85%;
+            left: 0%;
+            transform: translate(0%, -85%);
+        }
+
+        &-heading {
+            font-size: 5.5rem;
+            color: $color-secondary;
+            margin-bottom: 1.5rem;
+        }
+
+        &-text {
+            font-size: 1.9rem;
+            color: rgb(241, 241, 241);
+            margin-bottom: 6.5rem;
+        }
+
+        &-btn {
+            color: $color-secondary;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.9rem;
+            text-decoration: none;
+            border: 3px solid $color-secondary;
+            border-radius: 3rem;
+            transition: all 0.5s ease;
+            font-weight: bold;
+
+            &:hover {
+                background: $color-secondary;
+                color: #ff8929;
+            }
+
+            &-wrapper {
+                display: flex;
+            }
+        }
+    }
+
+    &__hero {
+        &-img {
+            width: 75rem;
+            height: 75rem;
+            animation: faq 5s ease infinite;
+        }
+    }
+}
+
+.header .wave {
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background: url(../img/wave-light/wave.png);
+    background-size: 100rem 10rem;
+    animation: animate-light-wave 3s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.35s);
+}
+
+.header .wave#wave1 {
+    z-index: 100;
+    opacity: 1;
+    background-position-x: 40rem;
+}
+
+.header .wave#wave2 {
+    z-index: 99;
+    opacity: 0.5;
+    background-position-x: 30rem;
+}
+
+.header .wave#wave3 {
+    z-index: 98;
+    opacity: 0.2;
+    background-position-x: 20rem;
+}
+
+.header .wave#wave4 {
+    z-index: 98;
+    opacity: 0.7;
+    background-position-x: 10rem;
+}
+
+@keyframes animate-light-wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1.5rem);
+    }
+}
+
+.header__nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: all 1s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: auto;
+        right: 0;
+        width: 0;
+        height: 6px;
+        background: $color-secondary;
+        border-radius: 0.2rem;
+        transition: all 0.55s ease;
+    }
+
+    .header__nav-item:hover &::after {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+}
+
+.call-button {
+    border: 2px solid $color-secondary;
+    padding: 1.2rem 1.7rem;
+    border-radius: 3rem;
+    transition: all 0.5s ease;
+    font-size: 1.8rem !important;
+
+    &:hover {
+        background: $color-secondary;
+        color: #ff8929;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.header__nav-wrapper {
+    z-index: 200;
+    transition: all 0.6s ease;
+}
+
+.margin-right {
+    margin-right: 2rem;
+}
+
+.show-modal {
+    margin-bottom: 0.5rem;
+}
+
+.line-wrapper-img {
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+.line-wrapper-img img {
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+}
+
+.line-wrapper-overflow {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
